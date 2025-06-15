@@ -1,0 +1,131 @@
+/* Project Page Styles */
+.project-page {
+    padding-top: 60px;
+}
+
+.project-hero {
+    height: 50vh;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.project-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.project-details h2 {
+    color: #2c3e50;
+    margin: 2rem 0 1rem;
+    font-size: 2rem;
+}
+
+.project-overview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Features and Tech Details */
+.project-features ul,
+.project-tech ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-features li,
+.project-tech li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #444;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-features li::before,
+.project-tech li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+/* Links */
+.link-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-details {
+        padding: 0 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .link-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        text-align: center;
+    }
+} 
