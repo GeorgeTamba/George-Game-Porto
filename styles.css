@@ -73,6 +73,17 @@ nav {
     opacity: 0.9;
 }
 
+.profile-pic {
+    width: 140px;
+    height: 180px;
+    border-radius: 50% / 40%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border: 4px solid #fff;
+    background: #eee;
+}
+
 /* Sections */
 section {
     padding: 5rem 2rem;
@@ -147,6 +158,15 @@ section h2 {
 
 .project-link:hover {
     text-decoration: underline;
+}
+
+.project-card-img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: #eee;
 }
 
 /* Contact Section */
