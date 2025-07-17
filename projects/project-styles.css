@@ -1,19 +1,28 @@
 /* Project Page Styles */
 .project-page {
     padding-top: 60px;
+    color: #eaf2fb;
 }
 
 .project-hero {
     height: 50vh;
-    background: linear-gradient(135deg, #2c3e50, #3498db);
+    background: linear-gradient(135deg, #23283b, #3498db 90%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #f5f8fa;
     margin-bottom: 3rem;
     position: relative;
     overflow: hidden;
+}
+
+.hero-carousel-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(30, 40, 60, 0.35);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero-carousel-slider {
@@ -46,26 +55,42 @@
     margin-bottom: 1rem;
 }
 
+.project-hero-content.enhanced h1 {
+    color: #fff;
+    text-shadow: 0 2px 16px #3498db99, 0 1px 2px #000a;
+}
+.project-hero-content.enhanced .tag.accent {
+    color: #00eaff;
+    background: rgba(0,234,255,0.10);
+    border-radius: 8px;
+    padding: 0.3em 1em;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 0.7em;
+    display: inline-block;
+    text-shadow: 0 2px 8px #00eaff55;
+}
+
 .project-details {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-.project-details h2 {
-    color: #2c3e50;
-    margin: 2rem 0 1rem;
-    font-size: 2rem;
+.project-details h2, .card-box h2 {
+    color: #7f9cf5;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 2px 8px #7f9cf555;
 }
 
 .project-overview {
     text-align: center;
 }
 
-.project-overview p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
+.project-overview p, .project-contributions p, .project-features li, .project-tech li {
+    color: #fff;
 }
 
 .project-overview p + p {
@@ -91,6 +116,9 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    background: #23283b;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #00eaff22;
 }
 
 .gallery-item:hover img {
@@ -104,11 +132,10 @@
     padding: 0;
 }
 
-.project-features li,
-.project-tech li {
+.project-features li, .project-tech li {
+    color: #fff !important;
     padding: 0.5rem 0;
     font-size: 1.1rem;
-    color: #444;
     position: relative;
     padding-left: 1.5rem;
 }
@@ -119,6 +146,10 @@
     color: #3498db;
     position: absolute;
     left: 0;
+}
+
+.project-features li i, .project-tech li i, .project-contributions p i {
+    color: #00eaff;
 }
 
 /* Links */
@@ -137,6 +168,18 @@
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
+}
+
+.link-buttons .button {
+    background: #00eaff;
+    color: #181c24;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 2px 12px #00eaff55;
+}
+.link-buttons .button:hover {
+    background: #7f9cf5;
+    color: #181c24;
 }
 
 .button:hover {
@@ -164,6 +207,13 @@
     .button {
         text-align: center;
     }
+
+    .card-box {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+    .project-details h2, .card-box h2 {
+        font-size: 1.2rem;
+    }
 }
 
 /* .hero-carousel-bg { ... } (comment out or remove if not used) */
@@ -183,6 +233,14 @@
 }
 .project-contributions p + p {
     margin-top: 2em;
+}
+.card-box {
+    background: rgba(36, 41, 56, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    padding: 2.2rem 2.5rem 2rem 2.5rem;
+    margin-bottom: 2.2rem;
+    color: #eaf2fb;
 }
 @media (max-width: 900px) {
     .project-features-tech {
