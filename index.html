@@ -1,130 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>George Tamba - Game Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <nav>
-        <div class="nav-content">
-            <div class="logo">George Tamba</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/html5.svg"
+    />
+    <style>
+      .tech-icon {
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(0) saturate(100%) invert(87%) sepia(21%)
+          saturate(324%) hue-rotate(165deg) brightness(101%) contrast(89%);
+      }
+      .tech-icon:hover {
+        filter: brightness(0) saturate(100%) invert(77%) sepia(89%)
+          saturate(1919%) hue-rotate(164deg) brightness(103%) contrast(101%);
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+      }
+      .icon-html {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/html5.svg");
+      }
+      .icon-css {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/css3.svg");
+      }
+      .icon-js {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/javascript.svg");
+      }
+      .icon-csharp {
+        background-image: url("https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-plain.svg");
+      }
+      .icon-cpp {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/cplusplus.svg");
+      }
+      .icon-java {
+        background-image: url("https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg");
+        filter: brightness(0) saturate(100%) invert(87%) sepia(21%)
+          saturate(324%) hue-rotate(165deg) brightness(101%) contrast(89%);
+      }
+      .icon-mysql {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/mysql.svg");
+      }
+      .icon-unity {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/unity.svg");
+      }
+      .icon-netbeans {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/apachenetbeanside.svg");
+      }
+      .icon-android {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/androidstudio.svg");
+      }
+      .icon-blender {
+        background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/blender.svg");
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Animation -->
+    <div class="loading-overlay">
+      <div class="loader"></div>
+    </div>
+    <nav class="modern-nav">
+      <div class="nav-content">
+        <div class="logo">
+          <span class="logo-bracket">&lt;</span>
+          George Tamba
+          <span class="logo-bracket">/&gt;</span>
         </div>
+        <ul class="nav-links">
+          <li><a href="#home" data-text="Home">Home</a></li>
+          <li><a href="#about" data-text="Projects">Projects</a></li>
+          <li><a href="#projects" data-text="Skills">Skills</a></li>
+          <li><a href="#contact" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <section id="home" class="hero hero-hex">
-        <div class="hero-hex-flex">
-            <div class="hero-hex-left">
-                <p class="hero-hello">Hello, It's Me</p>
-                <h1 class="hero-hex-name">George Elver Andrew Tamba</h1>
-                <h2 class="hero-hex-role">And I'm a <span class="hero-hex-role-accent">Game Developer</span></h2>
-                <p class="hero-hex-desc">I’m an undergraduate student majoring in Information Technology with a concentration in Game Development at President University. I specialize in developing games using the Unity Engine, working across multiple platforms including 2D, 3D, and Virtual Reality projects. Currently, I’m involved in various projects ranging from personal works, academic assignments, to competitive game development projects. I am passionate about bringing creativity to life through games and aspire to one day create an original title that resonates globally.</p>
-                <div class="hero-hex-socials">
-                    <a href="mailto:georgelvertamba@gmail.com" target="_blank" class="hero-hex-social"><i class="fas fa-envelope"></i></a>
-                    <a href="https://instagram.com/_geyorge_" target="_blank" class="hero-hex-social"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/georgetamba" target="_blank" class="hero-hex-social"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/GeorgeTamba" target="_blank" class="hero-hex-social"><i class="fab fa-github"></i></a>
-                </div>
-                <a href="src/George Elver Andrew Tamba - Current - CV.pdf - Copy.pdf" class="hero-hex-btn" download>Download CV</a>
+      <div class="hero-hex-flex">
+        <div class="hero-hex-left">
+          <div class="hero-content-main">
+            <p class="hero-hello">Hello, I'm</p>
+            <h1 class="hero-hex-name">George Elver Andrew Tamba</h1>
+            <h2 class="hero-hex-role">
+              <span class="hero-hex-role-accent"
+                >Game Developer & Software Developer</span
+              >
+            </h2>
+            <p class="hero-hex-desc">
+              I’m an Information Technology student at President University,
+              specializing in Game Development. I have experience building
+              projects in game development, mobile apps, and software systems,
+              and I enjoy turning ideas into functional digital solutions across
+              the full development cycle.
+            </p>
+
+            <div class="hero-buttons">
+              <a
+                href="src/George Elver Andrew Tamba - GameDev - CV.pdf.pdf"
+                class="hero-btn primary"
+                download
+              >
+                <i class="fas fa-gamepad"></i>
+                Game Dev CV
+              </a>
+              <a
+                href="src/George Elver Andrew Tamba - General - CV.pdf.pdf"
+                class="hero-btn secondary"
+                download
+              >
+                <i class="fas fa-file-download"></i>
+                General CV
+              </a>
             </div>
-            <div class="hero-hex-right">
-                <div class="hexagon-img-glow">
-                    <img src="src/Profile Picture/PP 2.jpg" alt="George Tamba Profile Picture" class="hexagon-profile-pic">
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="hero-hex-right">
+          <div class="hero-visual">
+            <div class="circular-profile-container">
+              <div class="profile-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+                <div class="ring ring-4"></div>
+              </div>
+              <div class="profile-circle">
+                <img
+                  src="src/Profile Picture/PP RemoveBG.png"
+                  alt="George Tamba Profile Picture"
+                  class="circular-profile-pic"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="about">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="src/ZombieTop/Screenshot 2025-06-16 002510.png" alt="ZombieTop Project Image" class="project-card-img">
-                <h3>ZombieTop</h3>
-                <span class="tag">2D Game</span>
-                <p>A game where a soldier must escape from a horde of zombies across the rooftops of several buildings. Armed with a gun, he must clear the path and keep moving toward a rescue helicopter waiting at the end of each level.</p>
-                <a href="projects/zombietop.html" class="project-link">View Project Details</a>
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card modern-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-dot active"></span>
+              <span class="status-text">Completed</span>
             </div>
-
-            <div class="project-card">
-                <img src="src/Raturu/Raturu SS 3.jpg" alt="Raturu Project Image" class="project-card-img">
-                <h3>Raturu: Fever Home</h3>
-                <span class="tag">3D Horror Puzzle Game</span>
-                <p>A psychological puzzle game that takes place inside the feverish dream of a young child. Players navigate a surreal, eerie environment, solving intricate puzzles while evading a mysterious presence lurking in the shadows.</p>
-                <a href="projects/raturu.html" class="project-link">View Project Details</a>
+            <div class="project-tech">Unity • C#</div>
+          </div>
+          <img
+            src="src/ZombieTop/Screenshot 2025-06-16 002510.png"
+            alt="ZombieTop Project Image"
+            class="project-card-img"
+          />
+          <div class="project-card-content">
+            <h3>ZombieTop</h3>
+            <span class="tag">2D Game</span>
+            <p>
+              A game where a soldier must escape from a horde of zombies across
+              the rooftops of several buildings. Armed with a gun, he must clear
+              the path and keep moving toward a rescue helicopter waiting at the
+              end of each level.
+            </p>
+            <div class="project-footer">
+              <a href="projects/zombietop.html" class="project-link">
+                View Details
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <div class="project-icons">
+                <span class="icon-item"><i class="fas fa-gamepad"></i></span>
+                <span class="icon-item"><i class="fas fa-code"></i></span>
+              </div>
             </div>
-
-            <div class="project-card">
-                <img src="src/Outbreak/Outbreak Screenshot 4.png" alt="Outbreak Project Image" class="project-card-img">
-                <h3>Outbreak</h3>
-                <span class="tag">3D FPS Zombie Game</span>
-                <p>A first-person shooter where players must survive waves of relentless zombies. The objective is to navigate through danger zones, fend off the undead, and reach designated safe zones to stay alive.</p>
-                <a href="projects/outbreak.html" class="project-link">View Project Details</a>
-            </div>
-
-            <div class="project-card">
-                <img src="src/3SQuest/3S Screenshot 5.png" alt="3S Quest Project Image" class="project-card-img">
-                <h3>3S Quest: Tidy Up The Workplace</h3>
-                <span class="tag">VR Workplace Simulation</span>
-                <p>A virtual reality simulation game where players must follow the 3S principles: Sorting, Set in Order, and Shine. Players clean, organize, and manage workplace tasks within a time limit to achieve high scores — testing speed, accuracy, and prioritization through realistic VR interactions.</p>
-                <a href="projects/3s-quest.html" class="project-link">View Project Details</a>
-            </div>
+          </div>
         </div>
+
+        <div class="project-card modern-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-dot active"></span>
+              <span class="status-text">Completed</span>
+            </div>
+            <div class="project-tech">Unity • C#</div>
+          </div>
+          <img
+            src="src/Raturu/Raturu SS 3.jpg"
+            alt="Raturu Project Image"
+            class="project-card-img"
+          />
+          <div class="project-card-content">
+            <h3>Raturu: Fever Home</h3>
+            <span class="tag">3D Horror Puzzle Game</span>
+            <p>
+              A psychological puzzle game that takes place inside the feverish
+              dream of a young child. Players navigate a surreal, eerie
+              environment, solving intricate puzzles while evading a mysterious
+              presence lurking in the shadows.
+            </p>
+            <div class="project-footer">
+              <a href="projects/raturu.html" class="project-link">
+                View Details
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <div class="project-icons">
+                <span class="icon-item"><i class="fas fa-cube"></i></span>
+                <span class="icon-item"
+                  ><i class="fas fa-puzzle-piece"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card modern-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-dot active"></span>
+              <span class="status-text">Completed</span>
+            </div>
+            <div class="project-tech">Unity • C#</div>
+          </div>
+          <img
+            src="src/Outbreak/Outbreak Screenshot 4.png"
+            alt="Outbreak Project Image"
+            class="project-card-img"
+          />
+          <div class="project-card-content">
+            <h3>Outbreak</h3>
+            <span class="tag">3D FPS Zombie Game</span>
+            <p>
+              A first-person shooter where players must survive waves of
+              relentless zombies. The objective is to navigate through danger
+              zones, fend off the undead, and reach designated safe zones to
+              stay alive.
+            </p>
+            <div class="project-footer">
+              <a href="projects/outbreak.html" class="project-link">
+                View Details
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <div class="project-icons">
+                <span class="icon-item"><i class="fas fa-crosshairs"></i></span>
+                <span class="icon-item"><i class="fas fa-rocket"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card modern-card">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-dot active"></span>
+              <span class="status-text">Completed</span>
+            </div>
+            <div class="project-tech">Unity • C# • VR</div>
+          </div>
+          <img
+            src="src/3SQuest/3S Screenshot 5.png"
+            alt="3S Quest Project Image"
+            class="project-card-img"
+          />
+          <div class="project-card-content">
+            <h3>3S Quest: Tidy Up The Workplace</h3>
+            <span class="tag">VR Workplace Simulation</span>
+            <p>
+              A virtual reality simulation game where players must follow the 3S
+              principles: Sorting, Set in Order, and Shine. Players clean,
+              organize, and manage workplace tasks within a time limit to
+              achieve high scores — testing speed, accuracy, and prioritization
+              through realistic VR interactions.
+            </p>
+            <div class="project-footer">
+              <a href="projects/3s-quest.html" class="project-link">
+                View Details
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <div class="project-icons">
+                <span class="icon-item"
+                  ><i class="fas fa-vr-cardboard"></i
+                ></span>
+                <span class="icon-item"><i class="fas fa-tasks"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Tools & Skills Section -->
     <section class="tools-skills-section">
-        <div class="tools-skills-container">
-            <div class="tools-skills-box">
-                <h3><i class="fas fa-tools"></i> Tools</h3>
-                <div class="tools-icons">
-                    <div class="tool-item">
-                        <i class="fab fa-cuttlefish"></i>
-                        <span>C++</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fab fa-cuttlefish"></i>
-                        <span>C#</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fab fa-java"></i>
-                        <span>Java</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fas fa-gamepad"></i>
-                        <span>Unity</span>
-                    </div>
-                    <div class="tool-item">
-                        <i class="fab fa-blender"></i>
-                        <span>Blender</span>
-                    </div>
-                </div>
+      <div class="tools-skills-container">
+        <div class="tools-skills-box">
+          <h3><i class="fas fa-tools"></i> Technical Skills</h3>
+          <div class="tools-icons">
+            <div class="tool-item">
+              <div class="tech-icon icon-html"></div>
+              <span>HTML</span>
             </div>
-            <div class="tools-skills-box">
-                <h3><i class="fas fa-user-astronaut"></i> Skills</h3>
-                <ul class="skills-list">
-                    <li><i class="fas fa-users-cog"></i> Team Leadership</li>
-                    <li><i class="fas fa-tasks"></i> Project Management</li>
-                    <li><i class="fas fa-comments"></i> Communication Skills</li>
-                    <li><i class="fas fa-user-friends"></i> Team Coordination</li>
-                    <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
-                </ul>
+            <div class="tool-item">
+              <div class="tech-icon icon-css"></div>
+              <span>CSS</span>
             </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-js"></div>
+              <span>JavaScript</span>
+            </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-csharp"></div>
+              <span>C#</span>
+            </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-cpp"></div>
+              <span>C++</span>
+            </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-java"></div>
+              <span>Java</span>
+            </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-mysql"></div>
+              <span>MySQL</span>
+            </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-unity"></div>
+              <span>Unity Engine</span>
+            </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-netbeans"></div>
+              <span>NetBeans</span>
+            </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-android"></div>
+              <span>Android Studio</span>
+            </div>
+            <div class="tool-item">
+              <div class="tech-icon icon-blender"></div>
+              <span>Blender</span>
+            </div>
+          </div>
         </div>
+        <div class="tools-skills-box">
+          <h3><i class="fas fa-user-astronaut"></i> Soft Skills</h3>
+          <ul class="skills-list">
+            <li><i class="fas fa-users-cog"></i> Team Leadership</li>
+            <li><i class="fas fa-tasks"></i> Project Management</li>
+            <li><i class="fas fa-comments"></i> Communication Skills</li>
+            <li><i class="fas fa-user-friends"></i> Team Coordination</li>
+            <li><i class="fas fa-lightbulb"></i> Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="glow-text">Get In Touch</h2>
+        <p class="contact-description">
+          Ready to collaborate on your next game development project? Let's
+          create something amazing together!
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>georgelvertamba@gmail.com</p>
+            <a href="mailto:georgelvertamba@gmail.com" class="contact-btn"
+              >Send Email</a
+            >
+          </div>
+          <div class="contact-card glass-card">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Connect with me professionally</p>
+            <a
+              href="https://www.linkedin.com/in/georgetamba"
+              target="_blank"
+              class="contact-btn"
+              >Connect</a
+            >
+          </div>
+          <div class="contact-card glass-card">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <h3>GitHub</h3>
+            <p>Check out my code repositories</p>
+            <a
+              href="https://github.com/GeorgeTamba"
+              target="_blank"
+              class="contact-btn"
+              >View GitHub</a
+            >
+          </div>
+          <div class="contact-card glass-card">
+            <div class="contact-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <h3>Instagram</h3>
+            <p>Follow my journey and updates</p>
+            <a
+              href="https://www.instagram.com/_geyorge_/"
+              target="_blank"
+              class="contact-btn"
+              >Follow</a
+            >
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 George Tamba. All rights reserved.</p>
+      <p>&copy; 2025 George Tamba. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>
